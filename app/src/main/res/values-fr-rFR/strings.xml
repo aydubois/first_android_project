@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Films App</string>
+    <string name="user_name"><b>Ponyo</b></string>
+    <string name="title_movie_1">Rubber</string>
+    <string name="date_movie_1">10 novembre 2010</string>
+    <string name="title_movie_2">7 vies</string>
+    <string name="date_movie_2">14 janvier 2009</string>
+    <string name="favorite_movies"><u>Films favoris</u></string>
+    <string name="Search">Rechercher</string>
+    <string name="welcome">"Bienvenue, "</string>
+</resources>

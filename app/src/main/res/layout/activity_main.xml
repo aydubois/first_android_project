@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="#F4F4F4"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        >
+
+        <TextView
+            android:id="@+id/text_view_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/l_text_size"
+            android:textColor="@color/green_5"
+            android:paddingRight="10sp"
+            />
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name"
+            android:textSize="@dimen/l_text_size"
+            android:layout_toRightOf="@id/text_view_welcome"
+            android:textColor="@color/green_5"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/favorite_movies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/favorite_movies"
+        android:layout_below="@id/main_title"
+        android:layout_marginBottom="5dp"
+
+        />
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/Search"
+        android:backgroundTint="@color/green_5"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favorite_movies">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/first_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border"
+                android:padding="@dimen/s_marge"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/image_movie_1"
+                        android:layout_width="140dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/rubber"
+                        android:layout_alignParentLeft="true"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/image_movie_1"
+                        android:paddingLeft="20dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/title_movie_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_movie_1"
+                            android:layout_marginTop="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title_movie_1"
+                            android:text="@string/date_movie_1"
+                            android:layout_marginTop="10dp"
+                            />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/second_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:padding="@dimen/s_marge"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/image_movie_2"
+                        android:layout_width="140dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/seven_lifes"
+                        android:layout_alignParentLeft="true"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/image_movie_2"
+                        android:paddingLeft="20dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/title_movie_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_movie_2"
+                            android:layout_marginTop="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title_movie_2"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/date_movie_2"
+                            />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

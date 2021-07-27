@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="s_marge">10dp</dimen>
+    <dimen name="m_marge">20dp</dimen>
+    <dimen name="s_text_size">16sp</dimen>
+    <dimen name="m_text_size">20sp</dimen>
+    <dimen name="l_text_size">25sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>
