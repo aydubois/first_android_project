@@ -1,17 +1,17 @@
-package com.ayponyo.android.movieapp;
+package com.ayponyo.android.movieapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.ayponyo.android.movieapp.R;
+import com.ayponyo.android.movieapp.utils.Util;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mTextViewWelcome;
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mTextViewWelcome = (TextView) findViewById(R.id.text_view_welcome);
         mTextViewWelcome.setText(getString(R.string.welcome));
-
 
         /** ////////////////////////////////////////////////// **/
 
@@ -44,25 +43,26 @@ public class MainActivity extends AppCompatActivity {
         mLinearLayoutSecondMovie.setTag("2");
         mLinearLayoutSecondMovie.setOnClickListener(handleClickMovie);
 
-        Log.d("TAG", "MainActivity: onCreate()");
 
     }
-    private View.OnClickListener handleClick = new View.OnClickListener(){
-        @Override
-        public void onClick(View arg0) {
-            Button btn = (Button)arg0;
-            Log.d("Click", "Click button search");
-        }
+    private View.OnClickListener handleClick = arg0 -> {
+        Button btn = (Button)arg0;
+        Log.d("Click", "Click button search");
+        Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+        startActivity(intent);
     };
-    private View.OnClickListener handleClickMovie = new View.OnClickListener(){
-        @Override
-        public void onClick(View arg0) {
-            String tagNumberMovie = arg0.getTag().toString();
-            Log.d("Click", "Click movie "+tagNumberMovie);
-            Intent intent = new Intent(MainActivity.this, MovieActivity.class);
-            intent.putExtra("number_movie",tagNumberMovie);
-            startActivity(intent);
-        }
+    private View.OnClickListener handleClickMovie = arg0 -> {
+        String tagNumberMovie = arg0.getTag().toString();
+        int idTitle = getResources().getIdentifier("title_movie_"+tagNumberMovie, "string", getPackageName());
+        String titleMovie = getString(idTitle);
+        int idDate = getResources().getIdentifier("date_movie_"+tagNumberMovie, "string", getPackageName());
+        String dateMovie = getString(idDate);
+        Log.d("Click", "Click movie "+tagNumberMovie);
+        Intent intent = new Intent(MainActivity.this, MovieActivity.class);
+        intent.putExtra(Util.NUMBER_MOVIE,tagNumberMovie);
+        intent.putExtra(Util.TITLE_MOVIE,titleMovie);
+        intent.putExtra(Util.DATE_MOVIE,dateMovie);
+        startActivity(intent);
     };
     @Override
     protected void onDestroy() {

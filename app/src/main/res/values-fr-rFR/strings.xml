@@ -7,6 +7,18 @@
     <string name="title_movie_2">7 vies</string>
     <string name="date_movie_2">14 janvier 2009</string>
     <string name="favorite_movies"><u>Films favoris</u></string>
-    <string name="Search">Rechercher</string>
+    <string name="search">Rechercher</string>
     <string name="welcome">"Bienvenue, "</string>
+    <string name="title_activity_movie">Activité de Scroll</string>
+    <string name="action_settings">Configurations</string>
+    <string name="release">"Sortie : "</string>
+    <string name="director">"Réalisateur : "</string>
+    <string name="actors">"Acteurs : "</string>
+    <string name="awards">"Récompenses : "</string>
+    <string name="see_more">voir plus</string>
+    <string name="about_movie">A propos de ce film</string>
+    <string name="see_less">voir moins</string>
+    <string name="error_network">Vous devez activer la connexion internet</string>
+    <string name="error_API">Une erreur est survenue lors de la recherche du film</string>
+    <string name="search_activity">Recherche</string>
 </resources>
